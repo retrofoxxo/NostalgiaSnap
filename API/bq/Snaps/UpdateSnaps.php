@@ -19,7 +19,7 @@ if(count($snapIDs) == 0){
 }
 
 foreach($snapIDs as $blob){
-	$stateJSON = (isset($snapStatusJson[$blob]["c"]))? $snapStatusJson[$blob]["c"])] : 2;
+	$stateJSON = (isset($snapStatusJson[$blob]["c"]))? $snapStatusJson[$blob]["c"] : 2;
 	$updateSnapData = $RetrieveDBData->prepare("UPDATE snaps SET StateJSON = JSON_ARRAY($stateJSON) WHERE Recipient = ? && StateJSON = '[\"1\"]' && BlobID = ?;");
 	$updateSnapData->bind_param("ss", $_POST["username"], $blob);
 	$updateSnapData->execute();
@@ -32,4 +32,5 @@ foreach($snapIDs as $blob){
 
 die(json_encode(array(
 	"logged" => true,
+
 )));
