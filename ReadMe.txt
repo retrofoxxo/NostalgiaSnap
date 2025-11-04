@@ -9,4 +9,7 @@ Currently it includes support for the following features:
 
 Recommended Versions: 5.0.X and 6.X (Android is not fully supported)
 
+For Android, Snapchat 4.1.07 was tested
+
+
 NOTE: THIS PROJECT IS NOT ENDORSED BY SNAP INC!!!
