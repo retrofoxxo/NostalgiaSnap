@@ -37,11 +37,12 @@ $UploadUserData->bind_param("ssss", $_POST["time"], $recipients[0], $_POST["user
 $UploadUserData->execute();
 
 $deviceID = $bulkUserData[0]["DeviceID"] ?? "";
-print_r($bulkUserData);
+//print_r($bulkUserData);
 sendNotification($_POST["username"] . " send a snap!", $deviceID);
 
 die(json_encode(array(
 	"logged" => true,
 )));
+
 
 //this is ass
